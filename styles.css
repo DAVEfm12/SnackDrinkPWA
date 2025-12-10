@@ -1,0 +1,214 @@
+/* --- General --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* --- Navbar --- */
+.navbar-nav .nav-link {
+  color: #ffdd55;
+  transition: 0.3s;
+}
+.navbar-nav .nav-link:hover {
+  color: #00c8ff;
+}
+
+/* --- Banner --- */
+.banner img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+
+/* --- Secciones --- */
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ffdd55;
+  text-shadow: 0 0 10px #ffdd55;
+  margin-bottom: 1rem;
+}
+
+/* --- Sobre Nosotros --- */
+.sobre-nosotros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+.sobre-nosotros .texto {
+  flex: 1;
+}
+
+.sobre-nosotros .texto p,
+.sobre-nosotros .texto ul {
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.sobre-nosotros .texto ul li {
+  margin-bottom: 0.5rem;
+}
+
+.sobre-nosotros .logo {
+  flex: 1;
+  text-align: center;
+}
+
+.sobre-nosotros .logo img {
+  width: 18rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(255, 221, 85, 0.5);
+}
+
+/* --- Sliders --- */
+/* --- Sliders centrados --- */
+.slider-container {
+  overflow: hidden;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center; /* centra el track horizontalmente */
+}
+
+.slider-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease;
+  justify-content: center; /* centra las cards dentro del track */
+  flex-wrap: wrap; /* permite que las cards bajen en móvil */
+}
+
+.card {
+  background-color: #111;
+  border-radius: 1rem;
+  overflow: hidden;
+  min-width: 220px;
+  flex-shrink: 0;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255, 221, 85, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto; /* centra individualmente si hay pocas cards */
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card p {
+  margin: 0.5rem 0 1rem 0;
+  color: #ffdd55;
+  font-weight: 600;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 221, 85, 0.6);
+}
+
+/* --- Responsive ajustes --- */
+@media(max-width:1024px){
+  .slider-track {
+    justify-content: center;
+  }
+  .card {
+    min-width: 180px;
+  }
+}
+@media(max-width:768px){
+  .slider-track {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .card {
+    min-width: 140px;
+  }
+}
+
+
+/* --- Videos --- */
+.videos-cards iframe {
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 6px 18px rgba(255, 221, 85, 0.4);
+}
+
+/* --- Contacto / Ubicación --- */
+.contacto-ubicacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 1rem;
+}
+
+.contacto-ubicacion h2 {
+  margin-bottom: 1rem;
+}
+
+.contacto-ubicacion iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 1rem;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: rgba(0,0,0,0.85);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer img {
+  width: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Botones --- */
+.btn-golden {
+  border: 2px solid #ffdd55;
+  color: #ffdd55;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-golden:hover {
+  background: #ffdd55;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* --- Responsive --- */
+@media(max-width:768px){
+  .sobre-nosotros {
+    flex-direction: column;
+    text-align: center;
+  }
+  .slider-track {
+    gap: 0.5rem;
+  }
+  .card {
+    min-width: 180px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .contacto-ubicacion {
+    flex-direction: column;
+  }
+  .contacto-ubicacion iframe {
+    height: 250px;
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {"id":1,"nombre":"Atención a Domicilio","precio":0,"img":"atencion-a-domicilio.jpg","desc":"Servicio para eventos y entregas."},
+  {"id":2,"nombre":"Azulitos","precio":45,"img":"azulitos.jpg","desc":"Bebida refrescante con toque cítrico."},
+  {"id":3,"nombre":"Barra de Cócteles Personalizada","precio":0,"img":"barra-cocteles-personalizada.jpg","desc":"Barra completa y personalizable."},
+  {"id":4,"nombre":"Cumpleaños Adultos","precio":0,"img":"cumpleanos-adultos.jpg","desc":"Servicio para fiestas de adultos."},
+  {"id":5,"nombre":"Fiesta Infantil","precio":0,"img":"fiesta-infantil.jpg","desc":"Paquetes para niños."},
+  {"id":6,"nombre":"Jugo de Frutas","precio":25,"img":"jugo-de-frutas.jpg","desc":"Jugo natural recién exprimido."},
+  {"id":7,"nombre":"Leche con Chocolate","precio":20,"img":"leche-con-chocolate.jpg","desc":"Clásico caliente o frío."},
+  {"id":8,"nombre":"Margaritas","precio":55,"img":"margaritas.jpg","desc":"Margaritas en varios sabores."},
+  {"id":9,"nombre":"Mixto","precio":60,"img":"mixto.jpg","desc":"Combo mixto de bebidas y snacks."},
+  {"id":10,"nombre":"Mojito","precio":50,"img":"mojito.jpg","desc":"Mojito con hierbabuena fresca."},
+  {"id":11,"nombre":"Personalización de Bebidas","precio":0,"img":"personalizacion-bebidas.jpg","desc":"Personaliza tu bebida."},
+  {"id":12,"nombre":"Piña Colada","precio":55,"img":"pina-colada.jpg","desc":"Dulce y tropical."},
+  {"id":13,"nombre":"Reunión Juvenil","precio":0,"img":"reunion-juvenil.jpg","desc":"Paquetes para jóvenes."},
+  {"id":14,"nombre":"Smoothie Frutal","precio":40,"img":"smoothie-frutal.jpg","desc":"Smoothie natural."},
+  {"id":15,"nombre":"Snacks Adultos","precio":35,"img":"snacks-adultos.jpg","desc":"Tablas para adultos."},
+  {"id":16,"nombre":"Snacks Niños","precio":25,"img":"snacks-ninos.jpg","desc":"Cajas para niños."},
+  {"id":17,"nombre":"Snacks y Botanas Temáticas","precio":30,"img":"snacks-botanas-tematicas.jpg","desc":"Botanas temáticas."},
+  {"id":18,"nombre":"Banner Snack & Drink","precio":0,"img":"bannerds.png","desc":"Banner de la marca."},
+  {"id":19,"nombre":"Logo SnackDrink","precio":0,"img":"logods.png","desc":"Logo oficial."},
+  {"id":20,"nombre":"Logo SD","precio":0,"img":"sd_logo.png","desc":"Isotipo."}
+]

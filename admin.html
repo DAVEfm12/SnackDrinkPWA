@@ -1,0 +1,32 @@
+==== admin.html (panel admin simple) ====
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin - Snack & Drink</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Panel Admin</h1>
+    <p>Sube / edita productos (mock) — este panel usa la misma <code>/api/products.json</code> como fuente; para producción necesitas un backend real.</p>
+    <div id="adminArea"></div>
+  </div>
+  <script>
+    // Admin quick UI: fetch products.json and allow edit in-browser (changes not persisted server-side)
+    (async ()=>{
+      const res = await fetch('api/products.json'); const list = await res.json();
+      const el = document.getElementById('adminArea');
+      el.innerHTML = '<table style="width:100%;border-collapse:collapse"><thead><tr><th>id</th><th>Nombre</th><th>Precio</th><th>Acciones</th></tr></thead><tbody>'+
+        list.map(p=>`<tr><td>${p.id}</td><td><input value="${p.name}" data-id="${p.id}" class="inp-name"></td><td><input value="${p.price}" data-id="${p.id}" class="inp-price"></td><td><button data-id="${p.id}" class="save">Guardar (local)</button></td></tr>`).join('')+
+        '</tbody></table>';
+      el.querySelectorAll('.save').forEach(btn=>btn.addEventListener('click',()=>{
+        const id = btn.dataset.id;
+        const name = document.querySelector(`.inp-name[data-id=\"${id}\"]`).value;
+        const price = parseFloat(document.querySelector(`.inp-price[data-id=\"${id}\"]`).value);
+        alert('Cambio guardado localmente (no en servidor) — para persistir necesita backend). New: '+name+' $'+price);
+      }));
+    })();
+  </script>
+</body>
+</html>

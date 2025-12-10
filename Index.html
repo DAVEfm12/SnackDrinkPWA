@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Snack & Drink DAVE's</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="SD_logo.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d31ba2">
+<link rel="stylesheet" href="styles.css">
+<!-- Tailwind + DaisyUI -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: { colors: { 'neon-purple':'#d31ba2', 'neon-blue':'#00c8ff', 'golden':'#ffdd55' } } },
+  plugins: [daisyui]
+}
+</script>
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b-2 border-golden">
+  <div class="container mx-auto flex items-center justify-between p-4">
+    <a href="#inicio" class="flex items-center gap-2">
+      <img src="SD_logo.png" class="w-12">
+      <span class="text-golden font-bold text-lg">Snack & Drink</span>
+    </a>
+    <div class="hidden md:flex gap-6">
+      <a href="#inicio" class="hover:text-neon-blue">Inicio</a>
+      <a href="#sobre-nosotros" class="hover:text-neon-blue">Sobre Nosotros</a>
+      <a href="#productos" class="hover:text-neon-blue">Productos</a>
+      <a href="#servicios" class="hover:text-neon-blue">Servicios</a>
+      <a href="reservaciones.html" class="hover:text-neon-blue">Reservaciones</a>
+      <a href="#eventos" class="hover:text-neon-blue">Eventos</a>
+      <a href="#videos" class="hover:text-neon-blue">Videos</a>
+      <a href="#ubicacion" class="hover:text-neon-blue">Ubicación</a>
+      <a href="#contacto" class="hover:text-neon-blue">Contacto</a>
+    </div>
+    <button id="menuToggle" class="md:hidden text-golden p-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Menú móvil -->
+<div id="mobileMenu" class="fixed inset-0 bg-black/90 flex flex-col items-center justify-center gap-8 text-2xl transform -translate-y-full transition-transform duration-500 z-40">
+  <a href="#inicio" onclick="closeMenu()">Inicio</a>
+  <a href="#sobre-nosotros" onclick="closeMenu()">Sobre Nosotros</a>
+  <a href="#productos" onclick="closeMenu()">Productos</a>
+  <a href="#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="reservaciones.html" onclick="closeMenu()">Reservaciones</a>
+  <a href="#eventos" onclick="closeMenu()">Eventos</a>
+  <a href="#videos" onclick="closeMenu()">Videos</a>
+  <a href="#ubicacion" onclick="closeMenu()">Ubicación</a>
+  <a href="#contacto" onclick="closeMenu()">Contacto</a>
+</div>
+
+<!-- BANNER -->
+<section id="inicio" class="relative h-screen">
+  <img src="BANNER.png" class="w-full h-full object-cover">
+  <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center">
+    <h1 class="text-neon-purple text-5xl md:text-7xl font-bold">Snack & Drink DAVE's</h1>
+    <p class="mt-4 text-white/80 text-xl md:text-2xl">Diversión y sabor en cada evento</p>
+    <a href="reservaciones.html" class="btn btn-outline btn-golden mt-6">Reserva Ahora</a>
+  </div>
+</section>
+
+<!-- SOBRE NOSOTROS -->
+<section id="sobre-nosotros" class="container mx-auto py-20 px-4 grid md:grid-cols-2 gap-12 items-center">
+  <div>
+    <h2 class="text-golden text-4xl font-bold mb-4">SOBRE NOSOTROS</h2>
+    <p><b>Snack & Drink DAVE´s</b> es un espacio donde la diversión y el sabor se unen...</p>
+    <ul class="list-disc list-inside mt-4 space-y-2 text-white/80">
+      <li><b>Calidad:</b> Ingredientes frescos.</li>
+      <li><b>Creatividad:</b> Bebidas innovadoras.</li>
+      <li><b>Servicio:</b> Atención personalizada.</li>
+      <li><b>Diversión:</b> Momentos inolvidables.</li>
+    </ul>
+  </div>
+  <div class="text-center">
+    <img src="SD_logo.png" class="mx-auto w-72 rounded-xl shadow-lg">
+  </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section id="productos" class="py-20 bg-black/90">
+  <h2 class="text-center text-golden text-4xl font-bold mb-12">PRODUCTOS</h2>
+  <div class="swiper productosSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="azulitos.jpg" class="rounded-xl"><p class="text-center mt-2">Azulito Original</p></div>
+      <div class="swiper-slide"><img src="Mojito.jpg" class="rounded-xl"><p class="text-center mt-2">Mojito</p></div>
+      <div class="swiper-slide"><img src="margaritas.jpg" class="rounded-xl"><p class="text-center mt-2">Margaritas</p></div>
+      <div class="swiper-slide"><img src="PInACOLADA.jpg" class="rounded-xl"><p class="text-center mt-2">Piña Colada</p></div>
+    </div>
+    <div class="swiper-button-next text-golden"></div>
+    <div class="swiper-button-prev text-golden"></div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-20">
+  <h2 class="text-center text-golden text-4xl font-bold mb-12">SERVICIOS</h2>
+  <div class="slider-container">
+    <div class="slider-track">
+      <div class="card"><img src="BarradeCoctelesPersonalizada.jpg"><p>Barra de Cócteles</p></div>
+      <div class="card"><img src="PersonalizaciondeBebidas.jpg"><p>Personalización</p></div>
+      <div class="card"><img src="SnacksyBotanasTematicas.jpg"><p>Snacks Temáticos</p></div>
+      <div class="card"><img src="AtencionaDomicilio.jpg"><p>A domicilio</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTOS -->
+<section id="eventos" class="py-20">
+  <h2 class="text-center text-golden text-4xl font-bold mb-12">EVENTOS</h2>
+  <div class="slider-container">
+    <div class="slider-track">
+      <div class="card"><img src="15.png"><p>Quinceañera</p></div>
+      <div class="card"><img src="BODA.png"><p>Boda</p></div>
+      <div class="card"><img src="CUMPLE.png"><p>Cumpleaños</p></div>
+      <div class="card"><img src="FiestaInfantil.jpg"><p>Infantil</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" class="py-20 bg-black/90">
+  <h2 class="text-center text-golden text-4xl font-bold mb-12">VIDEOS</h2>
+  <div class="videos-cards grid md:grid-cols-3 gap-6 px-4">
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/CUSf93LLO38" allowfullscreen class="w-full h-60 rounded-xl"></iframe>
+      <p class="mt-2 text-center">Video 1</p>
+    </div>
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/CUSf93LLO38" allowfullscreen class="w-full h-60 rounded-xl"></iframe>
+      <p class="mt-2 text-center">Video 2</p>
+    </div>
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/CUSf93LLO38" allowfullscreen class="w-full h-60 rounded-xl"></iframe>
+      <p class="mt-2 text-center">Video 3</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO & UBICACIÓN -->
+<section class="contacto-ubicacion py-20 px-4 grid md:grid-cols-2 gap-12">
+<div id="contacto" class="text-center p-6 bg-black/80 rounded-xl shadow-lg">
+  <h2 class="text-golden text-3xl font-bold mb-4">CONTACTO</h2>
+  <p class="mb-2">
+    Teléfono: 
+    <a href="tel:+527443861188" class="hover:text-neon-blue font-semibold">+52 744 386 1188</a>
+  </p>
+  <p class="mb-4">
+    Email: 
+    <a href="mailto:info@snackdrinkdaves.com" class="hover:text-neon-blue font-semibold">info@snackdrinkdaves.com</a>
+  </p>
+</div>
+  <div id="ubicacion">
+    <h2 class="text-golden text-3xl font-bold mb-4">UBICACIÓN</h2>
+    <iframe class="w-full h-80 rounded-xl" src="https://www.google.com/maps/embed?..."></iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black/80 py-6 text-center">
+  <img src="SD_logo.png" class="mx-auto w-16 mb-2">
+  <p>© 2025 Snack & Drink DAVE´s. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('translate-y-0');
+  mobileMenu.classList.toggle('-translate-y-full');
+});
+function closeMenu() {
+  mobileMenu.classList.remove('translate-y-0');
+  mobileMenu.classList.add('-translate-y-full');
+}
+
+// Swiper
+new Swiper(".productosSwiper",{
+  slidesPerView:2,
+  spaceBetween:20,
+  loop:true,
+  autoplay:{delay:2500},
+  navigation:{nextEl:'.swiper-button-next', prevEl:'.swiper-button-prev'},
+  breakpoints:{768:{slidesPerView:3},1024:{slidesPerView:4}}
+});
+
+// Service Worker
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js'));
+}
+</script>
+
+</body>
+</html>
